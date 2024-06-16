@@ -11,52 +11,52 @@ importers:
         specifier: github:remorses/dark-github-theme
         version: dark-theme-github@https://codeload.github.com/remorses/dark-github-theme/tar.gz/3dde125a391f5557fcc42e0d95899750df4370bf
       gatsby:
-        specifier: ^5.12.12
+        specifier: ^5.13.6
         version: 5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5)
       gatsby-plugin-feed:
-        specifier: ^5.12.3
+        specifier: ^5.13.1
         version: 5.13.1(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5))(graphql@16.8.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       gatsby-plugin-image:
-        specifier: ^3.12.3
+        specifier: ^3.13.1
         version: 3.13.1(@babel/core@7.24.7)(gatsby-plugin-sharp@5.13.1(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5))(graphql@16.8.2))(gatsby-source-filesystem@5.13.1(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5)))(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5))(graphql@16.8.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       gatsby-plugin-manifest:
-        specifier: ^5.12.3
+        specifier: ^5.13.1
         version: 5.13.1(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5))(graphql@16.8.2)
       gatsby-plugin-offline:
-        specifier: ^6.12.3
+        specifier: ^6.13.2
         version: 6.13.2(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       gatsby-plugin-react-helmet:
-        specifier: ^6.12.0
+        specifier: ^6.13.1
         version: 6.13.1(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5))(react-helmet@6.1.0(react@18.3.1))
       gatsby-plugin-sharp:
-        specifier: ^5.12.3
+        specifier: ^5.13.1
         version: 5.13.1(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5))(graphql@16.8.2)
       gatsby-plugin-sitemap:
-        specifier: ^6.12.3
+        specifier: ^6.13.1
         version: 6.13.1(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       gatsby-plugin-styled-components:
-        specifier: ^6.12.0
+        specifier: ^6.13.1
         version: 6.13.1(babel-plugin-styled-components@2.1.4(@babel/core@7.24.7)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       gatsby-plugin-typography:
-        specifier: ^5.12.0
+        specifier: ^5.13.1
         version: 5.13.1(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5))(react-dom@18.3.1(react@18.3.1))(react-typography@0.16.23(react@18.3.1))(react@18.3.1)(typography@0.16.24)
       gatsby-remark-copy-linked-files:
-        specifier: ^6.12.0
+        specifier: ^6.13.1
         version: 6.13.1(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5))
       gatsby-remark-images:
-        specifier: ^7.12.3
+        specifier: ^7.13.1
         version: 7.13.1(gatsby-plugin-sharp@5.13.1(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5))(graphql@16.8.2))(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5))
       gatsby-remark-vscode:
         specifier: ^3.3.1
         version: 3.3.1
       gatsby-source-filesystem:
-        specifier: ^5.12.1
+        specifier: ^5.13.1
         version: 5.13.1(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5))
       gatsby-transformer-remark:
-        specifier: ^6.12.3
+        specifier: ^6.13.1
         version: 6.13.1(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5))
       gatsby-transformer-sharp:
-        specifier: ^5.12.3
+        specifier: ^5.13.1
         version: 5.13.1(gatsby-plugin-sharp@5.13.1(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5))(graphql@16.8.2))(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5))(graphql@16.8.2)
       react-helmet:
         specifier: ^6.1.0
@@ -65,10 +65,10 @@ importers:
         specifier: ^0.16.23
         version: 0.16.23(react@18.3.1)
       styled-components:
-        specifier: ^6.1.1
+        specifier: ^6.1.11
         version: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       styled-reset:
-        specifier: ^4.5.1
+        specifier: ^4.5.2
         version: 4.5.2(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       typography:
         specifier: ^0.16.24
@@ -78,10 +78,10 @@ importers:
         version: https://codeload.github.com/yunlingz/vscode-theme-github-light/tar.gz/38174065a9e6c8d93a20fab5fe7c7641c07aeca7
     devDependencies:
       "@commitlint/cli":
-        specifier: ^18.4.3
+        specifier: ^18.6.1
         version: 18.6.1(@types/node@20.14.2)(typescript@5.4.5)
       "@commitlint/config-conventional":
-        specifier: ^18.4.3
+        specifier: ^18.6.3
         version: 18.6.3
       "@graphql-eslint/eslint-plugin":
         specifier: ^3.20.1
@@ -93,10 +93,10 @@ importers:
         specifier: ^10.0.1
         version: 10.0.1(semantic-release@22.0.12(typescript@5.4.5))
       "@semantic-release/github":
-        specifier: ^9.2.5
+        specifier: ^9.2.6
         version: 9.2.6(semantic-release@22.0.12(typescript@5.4.5))
       "@semantic-release/npm":
-        specifier: ^11.0.2
+        specifier: ^11.0.3
         version: 11.0.3(semantic-release@22.0.12(typescript@5.4.5))
       "@semantic-release/release-notes-generator":
         specifier: ^12.1.0
@@ -111,10 +111,10 @@ importers:
         specifier: ^0.16.7
         version: 0.16.7
       "@typescript-eslint/eslint-plugin":
-        specifier: ^6.13.2
+        specifier: ^6.21.0
         version: 6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
       "@typescript-eslint/parser":
-        specifier: ^6.13.2
+        specifier: ^6.21.0
         version: 6.21.0(eslint@8.57.0)(typescript@5.4.5)
       babel-plugin-styled-components:
         specifier: ^2.1.4
@@ -123,26 +123,26 @@ importers:
         specifier: ^0.6.0
         version: 0.6.0
       eslint:
-        specifier: ^8.55.0
+        specifier: ^8.57.0
         version: 8.57.0
       eslint-config-prettier:
         specifier: ^9.1.0
         version: 9.1.0(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.0
+        specifier: ^2.29.1
         version: 2.29.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)
       eslint-plugin-jsx-a11y:
         specifier: ^6.8.0
         version: 6.8.0(eslint@8.57.0)
       eslint-plugin-react:
-        specifier: ^7.33.2
+        specifier: ^7.34.2
         version: 7.34.2(eslint@8.57.0)
       eslint-plugin-react-hooks:
-        specifier: ^4.6.0
+        specifier: ^4.6.2
         version: 4.6.2(eslint@8.57.0)
       eslint-plugin-unicorn:
-        specifier: ^49.0.0
-        version: 49.0.0(eslint@8.57.0)
+        specifier: ^54.0.0
+        version: 54.0.0(eslint@8.57.0)
       gatsby-plugin-alias-imports:
         specifier: ^1.0.5
         version: 1.0.5(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5))
@@ -150,34 +150,34 @@ importers:
         specifier: ^1.8.0
         version: 1.8.0(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5))
       gatsby-plugin-typescript:
-        specifier: ^5.12.1
+        specifier: ^5.13.1
         version: 5.13.1(gatsby@5.13.6(babel-eslint@10.1.0(eslint@8.57.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.4.5))
       graphql:
-        specifier: ^16.8.1
+        specifier: ^16.8.2
         version: 16.8.2
       husky:
         specifier: ^8.0.3
         version: 8.0.3
       lint-staged:
-        specifier: ^15.2.0
+        specifier: ^15.2.7
         version: 15.2.7
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
       prettier:
-        specifier: ^3.1.0
+        specifier: ^3.3.2
         version: 3.3.2
       react:
-        specifier: ^18.2.0
+        specifier: ^18.3.1
         version: 18.3.1
       react-dom:
-        specifier: ^18.2.0
+        specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       semantic-release:
-        specifier: ^22.0.10
+        specifier: ^22.0.12
         version: 22.0.12(typescript@5.4.5)
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.4.5
         version: 5.4.5
 
 packages:
@@ -1459,6 +1459,13 @@ packages:
         integrity: sha512-269Z39MS6wVJtsoUl10L60WdkhJVdPG24Q4eZTH3nnF6lpvSShEK3wQjDX9JRWAUPvPh7COouPpU9IrqaZFvtQ==,
       }
     engines: { node: ^12.22.0 || ^14.17.0 || >=16.0.0 }
+
+  "@eslint/eslintrc@3.1.0":
+    resolution:
+      {
+        integrity: sha512-4Bfj15dVJdoy3RfZmmo86RK1Fwzn6SstsvK9JS+BaVKqC6QQQQyXekNaC+g+LKNgkQ+2VhGAzm6hO40AhMR3zQ==,
+      }
+    engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
 
   "@eslint/js@8.57.0":
     resolution:
@@ -4407,10 +4414,10 @@ packages:
         integrity: sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==,
       }
 
-  ci-info@3.9.0:
+  ci-info@4.0.0:
     resolution:
       {
-        integrity: sha512-NIxF55hv4nSqQswkAeiOi1r83xy8JldOFDTWiug55KBu9Jnblncd2U6ViHmYgHf01TPZS77NJBhBMKdWj9HQMQ==,
+        integrity: sha512-TdHqgGf9odd8SXNuxtUBVx8Nv+qZOejE6qyqiy5NtbYYQOeFa6zmHkxlPzmaLxWWHsU6nJmB7AETdVPi+2NBUg==,
       }
     engines: { node: ">=8" }
 
@@ -5845,14 +5852,14 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
 
-  eslint-plugin-unicorn@49.0.0:
+  eslint-plugin-unicorn@54.0.0:
     resolution:
       {
-        integrity: sha512-0fHEa/8Pih5cmzFW5L7xMEfUTvI9WKeQtjmKpTUmY+BiFCDxkxrTdnURJOHKykhtwIeyYsxnecbGvDCml++z4Q==,
+        integrity: sha512-XxYLRiYtAWiAjPv6z4JREby1TAE2byBC7wlh0V4vWDCpccOSU1KovWV//jqPXF6bq3WKxqX9rdjoRQ1EhdmNdQ==,
       }
-    engines: { node: ">=16" }
+    engines: { node: ">=18.18" }
     peerDependencies:
-      eslint: ">=8.52.0"
+      eslint: ">=8.56.0"
 
   eslint-scope@5.1.1:
     resolution:
@@ -5896,6 +5903,13 @@ packages:
       }
     engines: { node: ^12.22.0 || ^14.17.0 || >=16.0.0 }
 
+  eslint-visitor-keys@4.0.0:
+    resolution:
+      {
+        integrity: sha512-OtIRv/2GyiF6o/d8K7MYKKbXrOUBIK6SfkIRM4Z0dY3w+LiQ0vy3F57m0Z71bjbyeiWFiHJ8brqnmE6H6/jEuw==,
+      }
+    engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
+
   eslint-webpack-plugin@2.7.0:
     resolution:
       {
@@ -5928,6 +5942,13 @@ packages:
         integrity: sha512-kTUIGKQ/mDPFoJ0oVfcmyJn4iBDRptjNVIzwIFR7tqWXdVI9xfA2RMwY/gbSpJG3lkdWNEjLap/NqVHZiJsdfg==,
       }
     engines: { node: ">=0.10" }
+
+  espree@10.0.1:
+    resolution:
+      {
+        integrity: sha512-MWkrWZbJsL2UwnjxTX3gG8FneachS/Mwg7tdGXce011sJd5b0JG54vat5KHnfSBODZ3Wvzd2WnjxyzsRoVv+ww==,
+      }
+    engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
 
   espree@7.3.1:
     resolution:
@@ -6995,6 +7016,13 @@ packages:
         integrity: sha512-AhO5QUcj8llrbG09iWhPU2B204J1xnPeL8kQmVorSsy+Sjj1sk8gIyh6cUocGmH4L0UuhAJy+hJMRA4mgA4mFQ==,
       }
     engines: { node: ">=8" }
+
+  globals@14.0.0:
+    resolution:
+      {
+        integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==,
+      }
+    engines: { node: ">=18" }
 
   globalthis@1.0.4:
     resolution:
@@ -14636,6 +14664,20 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  "@eslint/eslintrc@3.1.0":
+    dependencies:
+      ajv: 6.12.6
+      debug: 4.3.5
+      espree: 10.0.1
+      globals: 14.0.0
+      ignore: 5.3.1
+      import-fresh: 3.3.0
+      js-yaml: 4.1.0
+      minimatch: 3.1.2
+      strip-json-comments: 3.1.1
+    transitivePeerDependencies:
+      - supports-color
+
   "@eslint/js@8.57.0": {}
 
   "@gatsbyjs/parcel-namer-relative-to-cwd@2.13.1(@parcel/core@2.8.3)":
@@ -14916,7 +14958,7 @@ snapshots:
       "@graphql-tools/merge": 8.4.2(graphql@16.8.2)
       "@graphql-tools/utils": 9.2.1(graphql@16.8.2)
       graphql: 16.8.2
-      tslib: 2.4.1
+      tslib: 2.6.3
       value-or-promise: 1.0.12
 
   "@graphql-tools/url-loader@7.17.18(@types/node@20.14.2)(graphql@16.8.2)":
@@ -16869,7 +16911,7 @@ snapshots:
 
   ci-info@2.0.0: {}
 
-  ci-info@3.9.0: {}
+  ci-info@4.0.0: {}
 
   clean-regexp@1.0.0:
     dependencies:
@@ -17955,12 +17997,14 @@ snapshots:
       semver: 6.3.1
       string.prototype.matchall: 4.0.11
 
-  eslint-plugin-unicorn@49.0.0(eslint@8.57.0):
+  eslint-plugin-unicorn@54.0.0(eslint@8.57.0):
     dependencies:
       "@babel/helper-validator-identifier": 7.24.7
       "@eslint-community/eslint-utils": 4.4.0(eslint@8.57.0)
-      ci-info: 3.9.0
+      "@eslint/eslintrc": 3.1.0
+      ci-info: 4.0.0
       clean-regexp: 1.0.0
+      core-js-compat: 3.37.1
       eslint: 8.57.0
       esquery: 1.5.0
       indent-string: 4.0.0
@@ -17972,6 +18016,8 @@ snapshots:
       regjsparser: 0.10.0
       semver: 7.6.2
       strip-indent: 3.0.0
+    transitivePeerDependencies:
+      - supports-color
 
   eslint-scope@5.1.1:
     dependencies:
@@ -17992,6 +18038,8 @@ snapshots:
   eslint-visitor-keys@2.1.0: {}
 
   eslint-visitor-keys@3.4.3: {}
+
+  eslint-visitor-keys@4.0.0: {}
 
   eslint-webpack-plugin@2.7.0(eslint@7.32.0)(webpack@5.92.0):
     dependencies:
@@ -18098,6 +18146,12 @@ snapshots:
       es5-ext: 0.10.64
       event-emitter: 0.3.5
       type: 2.7.3
+
+  espree@10.0.1:
+    dependencies:
+      acorn: 8.12.0
+      acorn-jsx: 5.3.2(acorn@8.12.0)
+      eslint-visitor-keys: 4.0.0
 
   espree@7.3.1:
     dependencies:
@@ -19209,6 +19263,8 @@ snapshots:
   globals@13.24.0:
     dependencies:
       type-fest: 0.20.2
+
+  globals@14.0.0: {}
 
   globalthis@1.0.4:
     dependencies:
