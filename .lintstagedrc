@@ -1,4 +1,4 @@
 {
-  "**/*.(js|ts)?(x)": "yarn lint:fix",
-  "**/*": "yarn format"
+  "**/*.(js|ts)?(x)": "pnpm lint:fix",
+  "**/*": "pnpm format"
 }

@@ -20,9 +20,10 @@ const metaConfig = {
   title: "Nick's Page",
   description: `Nick's Blog`,
   author: "Nick",
-  siteUrl: "https://nextjs-boilerplate-e4ahg82u0-nicks-projects-fd7a2f07.vercel.app/",
+  siteUrl:
+    "https://nextjs-boilerplate-e4ahg82u0-nicks-projects-fd7a2f07.vercel.app/",
   lang: "en",
-  utterances: "sungik-choi/gatsby-starter-apple-comment",
+  utterances: "nicholasmullikin/gatsby-starter-apple-comment",
   links: {
     github: "https://github.com/sungik-choi/gatsby-starter-apple",
   },
