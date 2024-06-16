@@ -13,16 +13,16 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint": "eslint '**/*.{js, jsx, ts, tsx}'",
-    "lint:fix": "yarn lint --fix",
+    "lint:fix": "pnpm lint --fix",
     "format": "prettier . --write --ignore-unknown",
     "typecheck": "tsc --noEmit",
     "semantic-release": "semantic-release",
     "lint-staged": "lint-staged",
-    "pre-commit": "yarn lint-staged",
+    "pre-commit": "pnpm lint-staged",
     "postinstall": "husky install"
   },
   "dependencies": {
-    "dark-github-theme": "https://github.com/remorses/dark-github-theme.git#commit=3dde125a391f5557fcc42e0d95899750df4370bf",
+    "dark-github-theme": "github:remorses/dark-github-theme",
     "gatsby": "^5.12.12",
     "gatsby-plugin-feed": "^5.12.3",
     "gatsby-plugin-image": "^3.12.3",
@@ -44,7 +44,7 @@
     "styled-components": "^6.1.1",
     "styled-reset": "^4.5.1",
     "typography": "^0.16.24",
-    "vscode-theme-github-light": "https://github.com/yunlingz/vscode-theme-github-light.git#commit=38174065a9e6c8d93a20fab5fe7c7641c07aeca7"
+    "vscode-theme-github-light": "github:yunlingz/vscode-theme-github-light"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
@@ -101,5 +101,5 @@
     "url": "https://github.com/sungik-choi/gatsby-starter-apple/issues"
   },
   "homepage": "https://github.com/sungik-choi/gatsby-starter-apple#readme",
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "pnpm@9.3.0"
 }
