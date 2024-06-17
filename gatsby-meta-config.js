@@ -23,9 +23,9 @@ const metaConfig = {
   siteUrl:
     "https://nextjs-boilerplate-e4ahg82u0-nicks-projects-fd7a2f07.vercel.app/",
   lang: "en",
-  utterances: "nicholasmullikin/gatsby-starter-apple-comment",
+  utterances: "nicholasmullikin/website-comments",
   links: {
-    github: "https://github.com/sungik-choi/gatsby-starter-apple",
+    github: "https://github.com/nicholasmullikin/gatsby-starter-apple",
   },
   favicon: "src/images/icon.png",
 }
