@@ -180,27 +180,9 @@ const pwaPlugins = [
   "gatsby-plugin-offline",
 ]
 
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  if (stage === "build-html" || stage === "develop-html") {
-    actions.setWebpackConfig({
-      module: {
-        rules: [
-          {
-            test: /.*kitware.*/,
-            use: loaders.null(),
-          },
-        ],
-      },
-    })
-  }
-}
-
 module.exports = {
   graphqlTypegen: true,
   siteMetadata,
-  flags: {
-    DEV_SSR: true,
-  },
   plugins: [
     ...corePlugins,
     ...devPlugins,
