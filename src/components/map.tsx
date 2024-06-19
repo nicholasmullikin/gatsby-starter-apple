@@ -1,9 +1,11 @@
-import React, { type MutableRefObject, useEffect , useRef, useState } from "react"
-
-// import '@kitware/vtk.js/favicon';
+import React, {
+  type MutableRefObject,
+  useEffect,
+  useRef,
+  useState,
+} from "react"
 
 // Load the rendering pieces we want to use (for both WebGL and WebGPU)
-// import '@kitware/vtk.js/Rendering/Misc/RenderingAPIs';
 import "@kitware/vtk.js/Rendering/Profiles/Geometry"
 
 import vtkElevationReader from "@kitware/vtk.js/IO/Misc/ElevationReader"
@@ -12,7 +14,7 @@ import vtkMapper from "@kitware/vtk.js/Rendering/Core/Mapper"
 import vtkTexture from "@kitware/vtk.js/Rendering/Core/Texture"
 import vtkGenericRenderWindow from "@kitware/vtk.js/Rendering/Misc/GenericRenderWindow"
 
-const ObjViewer = () => {
+const Map = () => {
   const vtkContainerRef: MutableRefObject<null | HTMLDivElement> = useRef(null)
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const context: MutableRefObject<null | any> = useRef(null)
@@ -40,7 +42,7 @@ const ObjViewer = () => {
 
       const img = new Image()
       img.crossOrigin = "anonymous"
-      img.addEventListener('load', function textureLoaded() {
+      img.addEventListener("load", function textureLoaded() {
         const texture = vtkTexture.newInstance()
         texture.setInterpolate(true)
         texture.setImage(img)
@@ -144,4 +146,4 @@ const ObjViewer = () => {
   )
 }
 
-export default ObjViewer
+export default Map

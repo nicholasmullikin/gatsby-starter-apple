@@ -11,7 +11,7 @@ import DateTime from "~/src/styles/dateTime"
 import Markdown from "~/src/styles/markdown"
 import { rhythm } from "~/src/styles/typography"
 
-const ObjViewer = React.lazy(() => import("~/src/components/objviewer"))
+const Map = React.lazy(() => import("~/src/components/map"))
 
 const BlogPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
   const { markdownRemark } = data
@@ -47,9 +47,9 @@ const BlogPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
                 />
                 {!isSSR && (
                   <React.Suspense fallback={<div />}>
-                    <div style={{ width: "500px", height: "500px" }}>
-                      <ObjViewer />
-                    </div>
+                    {/* <div style={{ width: "500px", height: "500px" }}> */}
+                    <Map />
+                    {/* </div> */}
                   </React.Suspense>
                 )}
               </div>

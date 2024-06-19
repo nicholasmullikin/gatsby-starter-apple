@@ -180,9 +180,19 @@ const pwaPlugins = [
   "gatsby-plugin-offline",
 ]
 
+exports.replaceHydrateFunction = () => {
+  return (element, container) => {
+    const root = ReactDOM.createRoot(container)
+    root.render(element)
+  }
+}
+
 module.exports = {
   graphqlTypegen: true,
   siteMetadata,
+  flags: {
+    DEV_SSR: true,
+  },
   plugins: [
     ...corePlugins,
     ...devPlugins,
