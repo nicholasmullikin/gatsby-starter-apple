@@ -10,12 +10,14 @@ import Category from "~/src/styles/category"
 import DateTime from "~/src/styles/dateTime"
 import Markdown from "~/src/styles/markdown"
 import { rhythm } from "~/src/styles/typography"
-import ObjViewer from "../components/objviewer"
+
+const ObjViewer = React.lazy(() => import("~/src/components/objviewer"))
 
 const BlogPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark!
   const { title, desc, thumbnail, date, category } = frontmatter!
+  const isSSR = typeof window === "undefined"
 
   const ogImagePath =
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
@@ -43,8 +45,13 @@ const BlogPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
                   dangerouslySetInnerHTML={{ __html: html ?? "" }}
                   rhythm={rhythm}
                 />
-                <div style={{ width: '500px', height: '500px' }}><ObjViewer/></div>
-                
+                {!isSSR && (
+                  <React.Suspense fallback={<div />}>
+                    <div style={{ width: "500px", height: "500px" }}>
+                      <ObjViewer />
+                    </div>
+                  </React.Suspense>
+                )}
               </div>
             </InnerWrapper>
           </OuterWrapper>
