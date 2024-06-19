@@ -6,6 +6,7 @@
   "engines": {
     "node": ">=20"
   },
+  "type": "commonjs",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -22,6 +23,8 @@
     "postinstall": "husky install"
   },
   "dependencies": {
+    "@emotion/is-prop-valid": "^1.2.2",
+    "@kitware/vtk.js": "^30.7.1",
     "dark-github-theme": "github:remorses/dark-github-theme",
     "gatsby": "^5.13.6",
     "gatsby-plugin-feed": "^5.13.1",
@@ -41,6 +44,7 @@
     "gatsby-transformer-sharp": "^5.13.1",
     "react-helmet": "^6.1.0",
     "react-typography": "^0.16.23",
+    "react-vtk-js": "2.0.0-beta.17",
     "styled-components": "^6.1.11",
     "styled-reset": "^4.5.2",
     "typography": "^0.16.24",
@@ -55,6 +59,7 @@
     "@semantic-release/github": "^9.2.6",
     "@semantic-release/npm": "^11.0.3",
     "@semantic-release/release-notes-generator": "^12.1.0",
+    "@types/react": "^18.3.3",
     "@types/react-helmet": "^6.1.11",
     "@types/styled-components": "^5.1.34",
     "@types/typography": "^0.16.7",

@@ -1,6 +1,6 @@
 import React from "react"
 
-import styled, { ThemeProvider } from "styled-components"
+import styled, { StyleSheetManager, ThemeProvider } from "styled-components"
 
 import NavBar from "~/src/components/navBar/navBar"
 import useSiteMetadata from "~/src/hooks/useSiteMetadata"
@@ -8,6 +8,7 @@ import useTheme from "~/src/hooks/useTheme"
 import ThemeContext from "~/src/stores/themeContext"
 import GlobalStyle from "~/src/styles/globalStyle"
 import styledTheme from "~/src/styles/styledTheme"
+import isPropValid from "@emotion/is-prop-valid"
 
 import packageJSON from "../../package.json"
 
@@ -19,23 +20,25 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
   const copyrightString = `Copyright © ${author}. Built with `
 
   return (
-    <ThemeProvider theme={styledTheme}>
-      <ThemeContext.Provider value={theme}>
-        <GlobalStyle />
-        <Container>
-          <NavBar title={title} themeToggler={themeToggler} />
-          {children}
-        </Container>
-        <Footer role="contentinfo">
-          <Copyright aria-label="Copyright">
-            {copyrightString}
-            <RepoLink href={homepage} target="__blank">
-              {name}
-            </RepoLink>
-          </Copyright>
-        </Footer>
-      </ThemeContext.Provider>
-    </ThemeProvider>
+    <StyleSheetManager shouldForwardProp={isPropValid}>
+      <ThemeProvider theme={styledTheme}>
+        <ThemeContext.Provider value={theme}>
+          <GlobalStyle />
+          <Container>
+            <NavBar title={title} themeToggler={themeToggler} />
+            {children}
+          </Container>
+          <Footer role="contentinfo">
+            <Copyright aria-label="Copyright">
+              {copyrightString}
+              <RepoLink href={homepage} target="__blank">
+                {name}
+              </RepoLink>
+            </Copyright>
+          </Footer>
+        </ThemeContext.Provider>
+      </ThemeProvider>
+    </StyleSheetManager>
   )
 }
 

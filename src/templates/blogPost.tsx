@@ -10,6 +10,7 @@ import Category from "~/src/styles/category"
 import DateTime from "~/src/styles/dateTime"
 import Markdown from "~/src/styles/markdown"
 import { rhythm } from "~/src/styles/typography"
+import ObjViewer from "../components/objviewer"
 
 const BlogPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
   const { markdownRemark } = data
@@ -42,6 +43,8 @@ const BlogPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
                   dangerouslySetInnerHTML={{ __html: html ?? "" }}
                   rhythm={rhythm}
                 />
+                <div style={{ width: '500px', height: '500px' }}><ObjViewer/></div>
+                
               </div>
             </InnerWrapper>
           </OuterWrapper>

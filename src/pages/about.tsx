@@ -24,7 +24,6 @@ const About = () => {
   `)
 
   const markdown = data.allMarkdownRemark.edges[0].node.html
-
   return (
     <Layout>
       <SEO title="About" />
