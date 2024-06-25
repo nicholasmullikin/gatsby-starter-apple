@@ -1,149 +1,83 @@
-import React, {
-  type MutableRefObject,
-  useEffect,
-  useRef,
-  useState,
-} from "react"
+import React, { useEffect, useRef } from "react"
 
-// Load the rendering pieces we want to use (for both WebGL and WebGPU)
-import "@kitware/vtk.js/Rendering/Profiles/Geometry"
+import { Environment, OrbitControls, Stats } from "@react-three/drei"
+import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber"
+import GUI from "lil-gui"
+import { Mesh, type MeshStandardMaterial, TextureLoader } from "three"
+// @ts-expect-error temporary gui for now
 
-import vtkElevationReader from "@kitware/vtk.js/IO/Misc/ElevationReader"
-import vtkActor from "@kitware/vtk.js/Rendering/Core/Actor"
-import vtkMapper from "@kitware/vtk.js/Rendering/Core/Mapper"
-import vtkTexture from "@kitware/vtk.js/Rendering/Core/Texture"
-import vtkGenericRenderWindow from "@kitware/vtk.js/Rendering/Misc/GenericRenderWindow"
+function Earth() {
+  const meshRef = useRef<Mesh>(null)
+  const materialRef = useRef<MeshStandardMaterial>(null)
+  const { gl } = useThree()
 
-const Map = () => {
-  const vtkContainerRef: MutableRefObject<null | HTMLDivElement> = useRef(null)
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const context: MutableRefObject<null | any> = useRef(null)
-  const [coneResolution, setConeResolution] = useState(6)
-  const [representation, setRepresentation] = useState(2)
+  const texture = useLoader(TextureLoader, "/img/worldColour.5400x2700.jpg")
+  const displacementMap = useLoader(
+    TextureLoader,
+    "/img/gebco_bathy_2700x1350.jpg",
+  )
 
   useEffect(() => {
-    const element = vtkContainerRef.current
-    if (!context.current && element !== null) {
-      const genericRenderer = vtkGenericRenderWindow.newInstance({})
-      genericRenderer.setContainer(element)
-
-      const reader = vtkElevationReader.newInstance({
-        xSpacing: 0.015_68,
-        ySpacing: 0.015_68,
-        zScaling: 0.066_66,
-      })
-      // Download elevation and render when ready
-      reader
-        .setUrl(`https://kitware.github.io/vtk-js/data/elevation/dem.csv`)
-        .then(() => {
-          renderer.resetCamera()
-          renderWindow.render()
-        })
-
-      const img = new Image()
-      img.crossOrigin = "anonymous"
-      img.addEventListener("load", function textureLoaded() {
-        const texture = vtkTexture.newInstance()
-        texture.setInterpolate(true)
-        texture.setImage(img)
-        actor.addTexture(texture)
-        renderWindow.render()
-      })
-      img.src = `https://kitware.github.io/vtk-js/data/elevation/dem.jpg`
-
-      const mapper = vtkMapper.newInstance()
-      mapper.setInputConnection(reader.getOutputPort())
-      const actor = vtkActor.newInstance()
-      actor.setMapper(mapper)
-
-      const renderer = genericRenderer.getRenderer()
-      const renderWindow = genericRenderer.getRenderWindow()
-      renderer.addActor(actor)
-      renderer.resetCamera()
-      renderWindow.render()
-
-      context.current = {
-        genericRenderer,
-        renderWindow,
-        renderer,
-        reader,
-        actor,
-        mapper,
-      }
+    const gui = new GUI()
+    if (materialRef.current) {
+      gui.add(materialRef.current, "wireframe", 0, Math.PI * 2)
+      gui.add(materialRef.current, "displacementScale", 0, 1, 0.1)
     }
-
     return () => {
-      if (context.current) {
-        const { genericRenderer, reader, actor, mapper } = context.current
-        actor.delete()
-        mapper.delete()
-        reader.delete()
-        genericRenderer.delete()
-        context.current = undefined
-      }
+      gui.destroy()
     }
-  }, [vtkContainerRef, context])
+  }, [])
 
   useEffect(() => {
-    if (context.current) {
-      const { reader, renderWindow } = context.current
-      reader.setZScaling(coneResolution * 0.001)
-      renderWindow.render()
-    }
-  }, [coneResolution])
+    texture.anisotropy = gl.capabilities.getMaxAnisotropy()
+  }, [texture, gl])
 
-  useEffect(() => {
-    if (context.current) {
-      const { actor, renderWindow } = context.current
-      actor.getProperty().setRepresentation(representation)
-      renderWindow.render()
+  useFrame((_, delta) => {
+    if (typeof meshRef !== typeof Mesh && meshRef.current?.rotation.y != undefined) {
+      meshRef.current.rotation.y += delta / 20
     }
-  }, [representation])
+  })
 
   return (
-    <div>
-      <div ref={vtkContainerRef} style={{}} />
-      <table
-        style={{
-          top: "25px",
-          left: "25px",
-          background: "white",
-          padding: "12px",
-        }}
-      >
-        <tbody>
-          <tr>
-            <td>
-              <select
-                value={representation}
-                style={{ width: "100%" }}
-                onInput={(ev: React.ChangeEvent<HTMLSelectElement>) =>
-                  setRepresentation(Number(ev.target.value))
-                }
-              >
-                <option value="0">Points</option>
-                <option value="1">Wireframe</option>
-                <option value="2">Surface</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <input
-                type="range"
-                min="0"
-                max="300"
-                value={coneResolution}
-                onChange={(ev: React.ChangeEvent<HTMLInputElement>) =>
-                  setConeResolution(Number(ev.target.value))
-                }
-              />
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <mesh ref={meshRef} castShadow={true} receiveShadow={true}>
+      <icosahedronGeometry args={[1, 128]} />
+      <meshStandardMaterial
+        ref={materialRef}
+        wireframe={false}
+        map={texture}
+        displacementMap={displacementMap}
+        displacementScale={0.5}
+      />
+    </mesh>
   )
 }
 
-export default Map
+export function Map() {
+  const isBrowser = typeof window !== "undefined"
+
+  return (
+    isBrowser && (
+      <div style={{ height: "400px" }}>
+        <Canvas shadows camera={{ position: [0, 0, 1.75] }}>
+          <Environment files="/img/venice_sunset_1k.hdr" />
+          <directionalLight
+            intensity={Math.PI}
+            position={[4, 0, 2]}
+            castShadow={true}
+            shadow-mapSize-width={2048}
+            shadow-mapSize-height={2048}
+            shadow-camera-left={-2}
+            shadow-camera-right={2}
+            shadow-camera-top={-2}
+            shadow-camera-bottom={2}
+            shadow-camera-near={0.1}
+            shadow-camera-far={7}
+          />
+          <Earth />
+          <OrbitControls />
+          <Stats />
+        </Canvas>
+      </div>
+    )
+  )
+}

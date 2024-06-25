@@ -1,9 +1,10 @@
-import React from "react"
+import React, { Suspense } from "react"
 
 import { type PageProps, graphql } from "gatsby"
 import styled from "styled-components"
 
 import Comment from "~/src/components/comment"
+import { Map } from "~/src/components/map"
 import SEO from "~/src/components/seo"
 import Layout from "~/src/layouts/layout"
 import Category from "~/src/styles/category"
@@ -11,13 +12,11 @@ import DateTime from "~/src/styles/dateTime"
 import Markdown from "~/src/styles/markdown"
 import { rhythm } from "~/src/styles/typography"
 
-const Map = React.lazy(() => import("~/src/components/map"))
 
 const BlogPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark!
   const { title, desc, thumbnail, date, category } = frontmatter!
-  const isSSR = typeof window === "undefined"
 
   const ogImagePath =
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
@@ -45,13 +44,9 @@ const BlogPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
                   dangerouslySetInnerHTML={{ __html: html ?? "" }}
                   rhythm={rhythm}
                 />
-                {!isSSR && (
-                  <React.Suspense fallback={<div />}>
-                    {/* <div style={{ width: "500px", height: "500px" }}> */}
-                    <Map />
-                    {/* </div> */}
-                  </React.Suspense>
-                )}
+                <Suspense fallback={<></>}>
+                  <Map />
+                </Suspense>
               </div>
             </InnerWrapper>
           </OuterWrapper>
